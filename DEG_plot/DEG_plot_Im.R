@@ -92,7 +92,7 @@ rld_annot_paperDEG_Im <- rld_annot_Im[row.names(rld_annot_Im) %in% paperDEGs_Im,
 png(filename = paste0("./output/", ver, "/Immune/paperDEGs_heatmap_Im.png"),
     width = 5000, height = 7000, units = "px",
     bg = "white", res = 600)
-pheatmap(assay(rld_annot_DEG_Im),
+pheatmap(assay(rld_annot_paperDEG_Im),
          cluster_rows = TRUE, cluster_cols = FALSE,
          show_rownames = TRUE, fontsize = 20,
          scale = "row",

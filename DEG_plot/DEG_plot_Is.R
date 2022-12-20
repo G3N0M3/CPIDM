@@ -84,7 +84,7 @@ rld_annot_paperDEG_Is <- rld_annot_Is[row.names(rld_annot_Is) %in% paperDEG_Is, 
 png(filename = paste0("./output/", ver, "/Islet/paperDEGs_heatmap_Is.png"),
     width = 5000, height = 7000, units = "px",
     bg = "white", res = 600)
-pheatmap(assay(rld_annot_DEG_Is),
+pheatmap(assay(rld_annot_paperDEG_Is),
          cluster_rows = TRUE, cluster_cols = TRUE,
          show_rownames = TRUE, fontsize = 20,
          scale = "row",
