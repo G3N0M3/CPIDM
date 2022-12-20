@@ -56,8 +56,8 @@ for (gene in gene_list) {
     stat_compare_means(comparisons = comparisons,
                        p.adjust.methods = "fdr",
                        aes(label = format.pval(..p.adj.., digits = 3)))
-  gene
-  compare_means(count ~ treatment, data = df_Im)
+  #gene
+  #compare_means(count ~ treatment, data = df_Im)
   # Saving
   ggsave(paste0("Im_boxplot_", gene, ".png"),
          #plot = last_plot(),

@@ -4,7 +4,7 @@
 
 
 # Configuration -----------------------------------------------------------
-ver <- "1218"
+ver <- "1220"
 setwd("D:/_Projects/CPIDM/R_analysis/")
 # Creating output parent directory
 if (!dir.exists(paste0("./output/", ver))) {
@@ -171,3 +171,4 @@ if (!dir.exists(paste0("./output/", ver, "/expression"))) {
 # Run scripts that create GO analysis results
 source("./R_script/expression/expression_ImPC.R")
 source("./R_script/expression/expression_IsPC.R")
+
