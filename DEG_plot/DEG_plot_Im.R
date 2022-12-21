@@ -40,7 +40,8 @@ pheatmap(assay(rld_annot_DEG_Im),
          cluster_rows = TRUE, cluster_cols = TRUE,
          show_rownames = FALSE, fontsize = 20,
          scale = "row",
-         treeheight_row = 0, treeheight_col = 0,
+         treeheight_row = 0,
+         #treeheight_col = 0,
          col = colorRampPalette(rev(brewer.pal(n = 7, name = "RdYlBu")))(100))
 dev.off()
 
