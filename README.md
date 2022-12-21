@@ -1,6 +1,6 @@
 ### Project: CPIDM
 ___
-#### Desciprtion
+#### Description
 - R scripts written for DE analysis
 - main.R is the main script for the analysis and reads other scripts used in the analysis
 - scripts for 3D PCA is not included in main.R
