@@ -1,5 +1,6 @@
-### Project: CPIDM
-___
+Project: CPIDM
+---------------
+
 #### Description
 - R scripts written for DE analysis
 - main.R is the main script for the analysis and reads other scripts used in the analysis
