@@ -52,8 +52,8 @@ colors <- colorRampPalette(rev(brewer.pal(9, "Blues")))(25)
 sampleDists <- dist(t(assay(rld_annot_DEG_Im)))
 sampleDistMatrix <- as.matrix(sampleDists)
 rld_annot_DEG_Im$samples <- c("ImCTR_1", "ImCTR_2", "ImCTR_3", "ImCTR_4",
-                        "ImCTLA4_1", "ImCTLA4_2", "ImCTLA4_3", "ImCTLA4_4",
-                        "ImPDL1_1", "ImPDL1_2", "ImPDL1_3")
+                              "ImCTLA4_1", "ImCTLA4_2", "ImCTLA4_3", "ImCTLA4_4",
+                              "ImPDL1_1", "ImPDL1_2", "ImPDL1_3")
 rownames(sampleDistMatrix) <- rld_annot_DEG_Im$samples
 colnames(sampleDistMatrix) <- NULL
 
@@ -94,7 +94,7 @@ png(filename = paste0("./output/", ver, "/Immune/paperDEGs_heatmap_Im.png"),
     width = 5000, height = 7000, units = "px",
     bg = "white", res = 600)
 pheatmap(assay(rld_annot_paperDEG_Im),
-         cluster_rows = TRUE, cluster_cols = FALSE,
+         cluster_rows = TRUE, cluster_cols = TRUE,
          show_rownames = TRUE, fontsize = 20,
          scale = "row",
          treeheight_row = 0,

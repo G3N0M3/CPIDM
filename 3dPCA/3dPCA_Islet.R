@@ -4,13 +4,16 @@
 
 
 # Input data --------------------------------------------------------------
-choice_ntop = 1  # 1: use ntop, 0: use DEG
+choice_ntop = 2  # 1: use ntop, 0: use paperDEG, other numbers to use DEG
 
-if (choice_ntop) {
+if (choice_ntop == 1) {
   PC_data_Is <- assay(rld_Is)[order(rowVars(assay(rld_Is)), decreasing = TRUE), ][1:ntop_Is, ]
-} else {
+} else if (choice_ntop == 0){
   # rld_annot_Is is used since DEG_IsPC is annotated
   select <- row.names(rld_annot_Is) %in% paperDEG_Is
+  PC_data_Is <- assay(rld_annot_Is)[select, ]
+} else {
+  select <- row.names(rld_annot_Is) %in% DEG_IsPC
   PC_data_Is <- assay(rld_annot_Is)[select, ]
 }
 

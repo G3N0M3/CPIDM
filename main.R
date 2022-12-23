@@ -4,7 +4,7 @@
 
 
 # Configuration -----------------------------------------------------------
-ver <- "1220"
+ver <- "1222"
 setwd("D:/_Projects/CPIDM/R_analysis/")
 # Creating output parent directory
 if (!dir.exists(paste0("./output/", ver))) {
@@ -71,7 +71,7 @@ source("./R_script/volcano/vol_IsPC.R")
 
 # Shrinked Volcano Plot ---------------------------------------------------
 # Create output directory
-#if (!dir.exists(paste0("./output/", ver, "/shrkVolcano"))) {
+if (!dir.exists(paste0("./output/", ver, "/shrkVolcano"))) {
   dir.create(paste0("./output/", ver, "/shrkVolcano"))
   print(paste("Output shrkVolcano directory for version", ver, "created"))
 } else {
@@ -162,7 +162,7 @@ source("./R_script/GO_barplot/goBar_ImPC.R")
 # Violin ------------------------------------------------------------------
 # Create output directory
 if (!dir.exists(paste0("./output/", ver, "/expression"))) {
-  dir.create(paste0("./output/", ver, "/violin"))
+  dir.create(paste0("./output/", ver, "/expression"))
   print(paste("Output violin directory for version", ver, "created"))
 } else {
   print("DIRECTORY ALREADY EXISTS!!!")

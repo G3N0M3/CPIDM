@@ -4,7 +4,7 @@
 
 
 # Input data --------------------------------------------------------------
-choice_ntop = 1  # 1: use ntop, 0: use DEG
+choice_ntop = 0  # 1: use ntop, 0: use DEG
 
 if (choice_ntop) {
   PC_data_Im <- assay(rld_Im)[order(rowVars(assay(rld_Im)), decreasing = TRUE), ][1:ntop_Im, ]
@@ -16,7 +16,7 @@ if (choice_ntop) {
 
 
 # Calculate PCs -----------------------------------------------------------
-prin_comp <- prcomp(t(PC_data_Im), rank. = 3)
+prin_comp <- prcomp(t(PC_data_Im), rank = 3)
 
 components <- prin_comp[["x"]]
 components <- data.frame(components)
